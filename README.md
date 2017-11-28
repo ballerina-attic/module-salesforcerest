@@ -249,7 +249,7 @@ Updates an existing record
 
 ###### Properties
 * sobjectName: The relevant sobject name
-* ppayload - json payload containing record data
+* payload - json payload containing record data
 
 ###### Related Salesforce documentation
 [update](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_update_fields.htm)

@@ -29,6 +29,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects";
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -43,6 +44,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/describe/";
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -55,6 +57,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data";
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -68,6 +71,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/limits";
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -81,6 +85,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + requestingApiVersion;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -95,6 +100,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -114,6 +120,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/deleted/?start=" +
                             uri:encode(startTime) + "&end=" + uri:encode(endTime);
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -133,6 +140,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/updated/?start=" +
                             uri:encode(startTime) + "&end=" + uri:encode(endTime);
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -146,6 +154,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/PlatformAction";
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -160,6 +169,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + rowId;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -178,6 +188,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + fieldId + "/" + fieldValue;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -193,6 +204,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/query/?explain=" + listViewId;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -207,6 +219,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/query/?q=" + queryString;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -222,8 +235,10 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/queryAll/?q=" + queryString;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
+
     @Description { value:"If the queryAll results are too large, retrieve the next batch of results"}
     @Param { value:"apiVersion: The api version to send request to"}
     @Param { value:"nextRecordsUrl: The url sent with first batch of queryAll results to get the next batch"}
@@ -235,6 +250,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/queryAll/" + nextRecordsUrl;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -249,6 +265,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/query/" + nextRecordsUrl;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -263,6 +280,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/query/?explain=" + queryString;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -279,6 +297,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName;
         requestMsg.setJsonPayload(payload);
         response, e = oauth2Connector.post (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -296,6 +315,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         string requestURI = "/services/data/" + apiVersion + "/composite/tree/" + sobjectName;
         requestMsg.setJsonPayload(payload);
         response, e = oauth2Connector.post (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -309,7 +329,9 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         http:Response response = {};
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + deleteId;
+        requestMsg.setJsonPayload({});
         response, e = oauth2Connector.delete (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -327,6 +349,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + rowId + "?fields=" + fields;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -344,6 +367,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + rowId + "?fields=" + fields;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -362,6 +386,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
 
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + externalId + "?fields=" + fields;
         response, e = oauth2Connector.get (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -378,6 +403,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobjectName + "/" + recordId;
         requestMsg.setJsonPayload(payload);
         response, e = oauth2Connector.patch (requestURI, requestMsg);
+
         return response, e;
     }
 
@@ -397,6 +423,7 @@ public connector ClientConnector (string accessToken, string clientId, string cl
         string requestURI = "/services/data/" + apiVersion + "/sobjects/" + sobject + "/" + externalField + "/" + fieldValueId;
         requestMsg.setJsonPayload(payload);
         response, e = oauth2Connector.patch (requestURI, requestMsg);
+
         return response, e;
     }
 }
