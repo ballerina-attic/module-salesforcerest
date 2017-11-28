@@ -378,3 +378,7 @@ action.
 25. **upsert:**
 
 `bin$ ./ballerina run samples.bal upsert <accessToken> <clientID> <clientSecret> <refreshToken> <apiInstance> <refreshTokenEndpoint> <refreshTokenPath> <apiVersion> <sobjectName> <externalField> <fieldValueId>`
+
+| Ballerina Version | Salesforce REST Connector Version |
+| ----------------- | ---------------------- |
+| 0.95.2 | 0.95.2 |
