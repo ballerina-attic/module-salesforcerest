@@ -379,6 +379,16 @@ action.
 
 `bin$ ./ballerina run samples.bal upsert <accessToken> <clientID> <clientSecret> <refreshToken> <apiInstance> <refreshTokenEndpoint> <refreshTokenPath> <apiVersion> <sobjectName> <externalField> <fieldValueId>`
 
+**Note :-**
+
+Here, 
+
+refreshTokenEndpoint - The base url of the refresh token endpoint. Eg: "https://ap4.salesforce.com"
+
+refreshTokenPath - Resource path for refresh token endpoint. Eg: "/services/oauth2/token"
+
+
+
 | Ballerina Version | Salesforce REST Connector Version |
 | ----------------- | ---------------------- |
 | 0.95.2 | 0.95.2 |
