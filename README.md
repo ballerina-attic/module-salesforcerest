@@ -7,8 +7,8 @@ to use Ballerina Salesforce REST connector.
 ## Getting started
 
 1. Download the Ballerina tool distribution by navigating https://ballerinalang.org/downloads/
-2. Extract ballerina-oauth2-0.95.2.zip and copy ballerina-oauth2-0.95.2.jar into the `<ballerina-tools>/bre/lib` folder.
-3. Extract ballerina-salesforcerest-0.95.2.zip and copy ballerina-salesforcerest-0.95.2.jar into the `<ballerina-tools>/bre/lib` folder.
+2. Extract ballerina-oauth2-0.95.0.zip and copy ballerina-oauth2-0.95.0.jar into the `<ballerina-tools>/bre/lib` folder.
+3. Extract ballerina-salesforcerest-0.95.0.zip and copy ballerina-salesforcerest-0.95.0.jar into the `<ballerina-tools>/bre/lib` folder.
 
 ##### Prerequisites
 1. Create a Salesforce organization and create a connected app by visiting [Salesforce](https://login.salesforce.com/)
@@ -391,4 +391,4 @@ refreshTokenPath - Resource path for refresh token endpoint. Eg: "/services/oaut
 
 | Ballerina Version | Salesforce REST Connector Version |
 | ----------------- | ---------------------- |
-| 0.95.2 | 0.95.2 |
+| 0.95.3 | 0.95.0 |
