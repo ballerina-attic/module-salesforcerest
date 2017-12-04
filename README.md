@@ -7,7 +7,8 @@ to use Ballerina Salesforce REST connector.
 ## Getting started
 
 1. Download the Ballerina tool distribution by navigating https://ballerinalang.org/downloads/
-2. Extract ballerina-oauth2-0.95.0.zip and copy ballerina-oauth2-0.95.0.jar into the `<ballerina-tools>/bre/lib` folder.
+2. Navigate to https://github.com/ballerinalang/connector-oauth2/releases
+   Download and Extract ballerina-oauth2-0.95.0.zip and copy ballerina-oauth2-0.95.0.jar into the `<ballerina-tools>/bre/lib` folder.
 3. Extract ballerina-salesforcerest-0.95.0.zip and copy ballerina-salesforcerest-0.95.0.jar into the `<ballerina-tools>/bre/lib` folder.
 
 ##### Prerequisites
