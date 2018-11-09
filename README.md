@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wso2-ballerina/module-salesforcerest.svg?branch=master)](https://travis-ci.org/wso2-ballerina/module-salesforcerest)
+
 # Ballerina Salesforce REST Connector
 
 The salesforcerest connector allows you to access the Salesforce REST API through ballerina. And the salesforcerest 
